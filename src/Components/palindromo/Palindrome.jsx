@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
-import {Fade} from 'react-awesome-reveal'
+import {Fade} from 'react-awesome-reveal';
+import {Link} from 'react-router-dom'
 
 
 
@@ -83,7 +84,12 @@ function Palindrome() {
     }
 
     return (
-        <div className="py-4 max-w-[800px] m-auto">
+        <div className="py-4 max-w-[800px] m-auto ">
+
+<h1 className="text-2xl text-gray-800 text-center pb-6 font-bold">¿Es Palíndromo?</h1>
+
+<div className="fixed bottom-4 right-2 z-10  shadow-lg">
+    <Link to="/" className="bg-blue-400 py-3 px-6 text-white rounded-full "> Volver a la lista </Link></div>
 
             <section className="flex flex-col p-3 w-11/12 m-auto  rounded-lg shadow-md border border-gray-200 bg-gray-100">
 
@@ -101,7 +107,7 @@ function Palindrome() {
             </div></Fade>}
 
 
-            <section className="mt-4 flex flex-col  w-11/12 m-auto  rounded-lg overflow-hidden shadow-md bg-gray-100">
+            <section className="mt-4 flex flex-col  w-11/12 m-auto  rounded-lg overflow-hidden shadow-md bg-gray-100  mb-12">
 
 
             {showResults &&
