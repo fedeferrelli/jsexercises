@@ -19,9 +19,7 @@ function Factorial() {
    const factorial = (n) => {
      let fact = 1;
 
-     console.log("n: ", n)
-
-     if(n === undefined){
+     if(n === undefined || n==""){
       setError('Debes ingresar un número');
       setShowError(true)
       }
@@ -72,7 +70,7 @@ function Factorial() {
             <section className="flex flex-col p-3 w-11/12 m-auto  rounded-lg shadow-md border border-gray-200 bg-gray-100">
 
                 <label htmlFor="toEvaluate" className="w-full text-center text-xl text-gray-800 mb-4 font-semibold">Ingresa el número</label>
-                <input type="int" id="toEvaluate" placeholder="número entero no negativo" className="w-full p-4 rounded-md border border-gray-300 my-2 m-auto" onChange={(e)=>{changeValueToEvaluate(e.target.value)}}></input>
+                <input type="number" id="toEvaluate" placeholder="número entero no negativo" className="w-full p-4 rounded-md border border-gray-300 my-2 m-auto" onChange={(e)=>{changeValueToEvaluate(e.target.value)}}></input>
 
                 <button type="submit" className="w-full m-auto p-4 bg-blue-400 rounded-md uppercase text-white" onClick={()=>{letsCheckItOut()}}>conocer el factorial </button>
 
