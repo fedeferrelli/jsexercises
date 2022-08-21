@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
-import {BsGithub} from 'react-icons/bs'
+import { BsGithub } from "react-icons/bs";
 
 function FizzBuzz() {
   const [result, setResult] = useState([]);
@@ -56,22 +56,20 @@ function FizzBuzz() {
         Fizz Buzz
       </h1>
 
-      <div className="fixed bottom-4 w-full z-10 shadow-lg flex flex-row justify-between px-3">
-
-        <Link to="/" className="bg-blue-400 px-6 py-3 text-white rounded-full ">
+      <div className="fixed bottom-4 w-full z-10 flex flex-row justify-between px-3">
+        <Link to="/" className="bg-blue-400 px-6 py-2 text-white rounded-full ">
           {" "}
           Volver a la lista{" "}
         </Link>
 
-        <a className=" text-blue-400 flex" href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/fizzBuzz/FizzBuzz.jsx" target="_blank">
-          <BsGithub className="m-auto text-5xl"/>
+        <a
+          className=" text-blue-400 flex"
+          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/fizzBuzz/FizzBuzz.jsx"
+          target="_blank"
+        >
+          <BsGithub className="m-auto text-4xl" />
         </a>
       </div>
-      {/* <div className="fixed bg-blue-400 rounded-full bottom-4  left-2 z-10 flex shadow-lg">
-         <a className=" text-white m-auto bg-red-400" href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/fizzBuzz/FizzBuzz.jsx" target="_blank">
-          <BsGithub className="m-auto text-4xl"/>
-        </a>
-      </div> */}
 
       <section className="flex flex-col p-3 w-11/12 m-auto  rounded-lg shadow-md border border-gray-200 bg-gray-100">
         <label
