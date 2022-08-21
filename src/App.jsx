@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Palindrome from "./Components/palindromo/Palindrome";
 import Factorial from "./Components/factorial/Factorial";
+import FizzBuzz from "./Components/fizzBuzz/FizzBuzz";
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
             <Route path="/palindromo" exact element={<Palindrome/>}/>
 
             <Route path="/factorial" exact element ={<Factorial/>}/>
+
+            <Route path="/fizzbuzz" exact element = {<FizzBuzz/>}/>
             
           </Routes>
       </Router>
