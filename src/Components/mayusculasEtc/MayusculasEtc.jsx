@@ -120,7 +120,7 @@ function MayusculasEtc() {
 
         <a
           className=" text-blue-400 flex"
-          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/fizzBuzz/FizzBuzz.jsx"
+          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/mayusculasEtc/MayusculasEtc.jsx"
           target="_blank"
         >
           <BsGithub className="m-auto text-4xl" />
