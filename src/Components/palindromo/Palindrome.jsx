@@ -132,7 +132,7 @@ function Palindrome() {
         </Fade>
       )}
 
-      <section className="mt-4 flex flex-col  w-11/12 m-auto  rounded-lg overflow-hidden shadow-md bg-gray-100  mb-12">
+      <section className="mt-4 flex flex-col  w-11/12 m-auto  rounded-lg overflow-hidden shadow-md   mb-12">
         {showResults && (
           <Fade duration="500">
             <div className="h-full w-full text-center">

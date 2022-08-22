@@ -7,7 +7,8 @@ function Home() {
     const ejercicios = [
         {name: '¿Es Palíndromo?', link:"/palindromo"}, 
         {name: 'Factorial', link:"/factorial"}, 
-        {name: 'Fizz Buzz', link:"/fizzbuzz"} 
+        {name: 'Fizz Buzz', link:"/fizzbuzz"},
+        {name: 'Mayúsculas, Minúsculas, Capitalize, etc', link:"/mayusculas"} 
 
                         ]
 
