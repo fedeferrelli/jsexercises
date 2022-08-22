@@ -176,7 +176,7 @@ function MayusculasEtc() {
             letsCheckItOut();
           }}
         >
-          Let's FizzBuzz!{" "}
+          Modificar!{" "}
         </button>
       </section>
 
