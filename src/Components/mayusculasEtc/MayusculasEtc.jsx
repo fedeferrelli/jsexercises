@@ -81,6 +81,14 @@ function MayusculasEtc() {
     setShowResults(true);
   };
 
+  const capitalize = (string) => {
+
+    let arrayAux = [...string];
+    
+    setResult(string.slice(0,1).toUpperCase() + string.slice(1).toLowerCase());
+    setShowResults(true);
+  };
+
   const changeValueToEvaluate = (string) => {
     setShowResults(false);
     setShowError(false);
@@ -98,11 +106,14 @@ function MayusculasEtc() {
     } else if (feature === "vocales") {
       vowels(toEvaluate);
     } else if (feature === "constantes") {
-      constantes(toEvaluate);
+      constants(toEvaluate);
     } else if (feature === "minMay") {
       minMay(toEvaluate);
     } else if (feature === "mayMin") {
       mayMin(toEvaluate);
+    }
+    else if (feature === "capitalize") {
+      capitalize(toEvaluate);
     }
   };
 
@@ -155,6 +166,7 @@ function MayusculasEtc() {
             MAYUSCULAS
           </option>
           <option value="minusculas">MINUSCULAS</option>
+          <option value="capitalize">Capitalize</option>
           <option value="vocales" defaultValue>
             vOcAlEs
           </option>
