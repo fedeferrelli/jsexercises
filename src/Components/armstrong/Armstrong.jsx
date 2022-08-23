@@ -89,7 +89,7 @@ function Armstrong() {
             letsCheckItOut();
           }}
         >
-          conocer el factorial{" "}
+          Narciso, r u there?{" "}
         </button>
       </section>
 
