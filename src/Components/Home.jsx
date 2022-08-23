@@ -8,7 +8,8 @@ function Home() {
         {name: '¿Es Palíndromo?', link:"/palindromo"}, 
         {name: 'Factorial', link:"/factorial"}, 
         {name: 'Fizz Buzz', link:"/fizzbuzz"},
-        {name: 'Mayúsculas, Minúsculas, etc', link:"/mayusculas"} 
+        {name: 'Mayúsculas, Minúsculas, etc', link:"/mayusculas"},
+        {name: 'Número de Armstrong', link:"/armstrong"} 
 
                         ]
 

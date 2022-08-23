@@ -5,6 +5,7 @@ import Palindrome from "./Components/palindromo/Palindrome";
 import Factorial from "./Components/factorial/Factorial";
 import FizzBuzz from "./Components/fizzBuzz/FizzBuzz";
 import MayusculasEtc from "./Components/mayusculasEtc/MayusculasEtc";
+import Armstrong from "./Components/armstrong/Armstrong"
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
             <Route path="/fizzbuzz" exact element = {<FizzBuzz/>}/>
 
             <Route path="/mayusculas" exact element = {<MayusculasEtc/>}/>
+            
+            <Route path="/armstrong" exact element = {<Armstrong/>}/>
             
           </Routes>
       </Router>
