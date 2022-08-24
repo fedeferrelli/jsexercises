@@ -111,7 +111,7 @@ function Factorial() {
               <div className="bg-gray-400 text-gray-600 text-xl p-3">
                 el Factorial de <strong>{toEvaluate}</strong> es
                 <span className="block text-xl text-gray-700 font-bold py-3">
-                  {result.toLocaleString("es-ES")}
+                  {result.toLocaleString("de-DE")}
                 </span>
               </div>
             </div>

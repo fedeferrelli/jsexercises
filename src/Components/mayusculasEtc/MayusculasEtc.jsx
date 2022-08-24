@@ -143,7 +143,7 @@ function MayusculasEtc() {
           htmlFor="toEvaluate"
           className="w-full text-center text-xl text-gray-800 mb-4 font-semibold"
         >
-          Ingresa el número
+          Ingresa la palabra
         </label>
         <textarea
           rows="4"

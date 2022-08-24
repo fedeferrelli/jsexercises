@@ -4,41 +4,33 @@ import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import { BsGithub } from "react-icons/bs";
 
-function FizzBuzz() {
+function Fibonacci() {
   const [result, setResult] = useState([]);
   const [toEvaluate, setToEvaluate] = useState();
-  const [isPalindrome, setIsPalindrome] = useState(false);
+  const [feature, setFeature] = useState("elemento");
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false);
 
-  const fizzbuzz = (n) => {
-    let fizzBuzzArray = [];
+  const fibonacci = (n) =>{
 
-    if (n === undefined || n == "") {
-      setError("Debes ingresar un número");
-      setShowError(true);
-    } else if (n < 1 || Math.floor(n) - n !== 0) {
-      setError("Debes ingresar un número entero positivo");
-      setShowError(true);
-    } else {
-      for (let i = 1; i <= n; i++) {
-        if (i % 15 === 0) {
-          fizzBuzzArray.push(`${i}: Fizz Buzz`);
-        } else if (i % 5 === 0) {
-          fizzBuzzArray.push(`${i}: Buzz`);
-        } else if (i % 3 === 0) {
-          fizzBuzzArray.push(`${i}: Fizz`);
-        } else {
-          fizzBuzzArray.push(i);
-        }
+    let aux=[];
 
-        setShowResults(true);
+    if(n==1){
+      aux=[1]
+    }
+    else if(n==2){
+      aux=[1, 1]
+    }
+    else if (n>=3){
+      aux=[1, 1]
+      for(let i = 3; i<=n; i++){
+        aux.push(aux[i-3] + aux[i-2])
       }
     }
-
-    setResult(fizzBuzzArray);
-  };
+    setResult(aux)
+    setShowResults(true)
+  }
 
   const changeValueToEvaluate = (string) => {
     setShowResults(false);
@@ -47,13 +39,18 @@ function FizzBuzz() {
   };
 
   const letsCheckItOut = () => {
-    fizzbuzz(toEvaluate);
+    if(toEvaluate<=0 || Math.floor(toEvaluate)-toEvaluate!==0){
+      setError('Debes ingresar un número entero positvo');
+      setShowError(true)
+    }
+    else {fibonacci(toEvaluate)}
+    
   };
 
   return (
     <div className="py-4 max-w-[800px] m-auto ">
       <h1 className="text-2xl text-gray-800 text-center pb-6 font-bold">
-        Fizz Buzz
+        Sucesión de Fibonacci
       </h1>
 
       <div className="fixed bottom-4 w-full z-10 flex flex-row justify-between px-3">
@@ -64,7 +61,7 @@ function FizzBuzz() {
 
         <a
           className=" text-blue-400 flex"
-          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/fizzBuzz/FizzBuzz.jsx"
+          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/mayusculasEtc/MayusculasEtc.jsx"
           target="_blank"
         >
           <BsGithub className="m-auto text-4xl" />
@@ -79,14 +76,28 @@ function FizzBuzz() {
           Ingresa el número
         </label>
         <input
-          type="number"
           id="toEvaluate"
-          placeholder="número entero no negativo"
+          type="number"
+          placeholder="ingresa un número entero positivo"
           className="w-full p-4 rounded-md border border-gray-300 my-2 m-auto"
           onChange={(e) => {
             changeValueToEvaluate(e.target.value);
           }}
         ></input>
+
+        <select
+          name="select"
+          className="w-full m-auto p-4  rounded-md border mb-4 border-gray-200"
+          onChange={(e) => {
+            setFeature(e.target.value);
+          }}
+        >
+          <option value="elemento" defaultValue>
+            Sólo el elemento
+          </option>
+          <option value="serie">Sucesión completa</option>
+          
+        </select>
 
         <button
           type="submit"
@@ -95,7 +106,7 @@ function FizzBuzz() {
             letsCheckItOut();
           }}
         >
-          Let's FizzBuzz!{" "}
+          fi bo na cci !{" "}
         </button>
       </section>
 
@@ -112,11 +123,24 @@ function FizzBuzz() {
           <Fade duration="500">
             <div className="h-full w-full text-center">
               <div className="bg-gray-400 text-gray-600 text-xl p-3 flex flex-wrap gap-2 justify-center">
-                {result.map((e) => (
-                  <div className="py-2 px-3 rounded-lg border bg-gray-500 text-white border-gray-700">
+                
+                { feature==="elemento" ?
+                  
+                  result[result.length-1].toLocaleString('de-DE')
+
+                  :
+
+                  result.map((e, index)=>(
+                    <div key={index} className="py-2 px-3 rounded-lg border bg-gray-500 text-white border-gray-700">
                     {e.toLocaleString('de-DE')}
                   </div>
-                ))}
+                  ))
+
+
+                }
+                
+                
+                {}
               </div>
             </div>
           </Fade>
@@ -126,4 +150,4 @@ function FizzBuzz() {
   );
 }
 
-export default FizzBuzz;
+export default Fibonacci;
