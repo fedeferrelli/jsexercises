@@ -58,7 +58,7 @@ function Armstrong() {
 
         <a
           className=" text-blue-400 flex"
-          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/factorial/Factorial.jsx"
+          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/armstrong/Armstrong.jsx"
           target="_blank"
         >
           <BsGithub className="m-auto text-4xl" />

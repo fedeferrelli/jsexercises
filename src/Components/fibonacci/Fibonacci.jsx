@@ -61,7 +61,7 @@ function Fibonacci() {
 
         <a
           className=" text-blue-400 flex"
-          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/mayusculasEtc/MayusculasEtc.jsx"
+          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/fibonacci/Fibonacci.jsx"
           target="_blank"
         >
           <BsGithub className="m-auto text-4xl" />
