@@ -10,7 +10,8 @@ function Home() {
         {name: 'Fizz Buzz', link:"/fizzbuzz"},
         {name: 'Mayúsculas, Minúsculas, etc', link:"/mayusculas"},
         {name: 'Número de Armstrong', link:"/armstrong"},
-        {name: 'Sucesión de Fibonacci', link:"/fibonacci"} 
+        {name: 'Sucesión de Fibonacci', link:"/fibonacci"},
+        {name: 'Números Romanos', link:"/roman"} 
 
                         ]
 

@@ -6,7 +6,8 @@ import Factorial from "./Components/factorial/Factorial";
 import FizzBuzz from "./Components/fizzBuzz/FizzBuzz";
 import MayusculasEtc from "./Components/mayusculasEtc/MayusculasEtc";
 import Armstrong from "./Components/armstrong/Armstrong";
-import Fibonacci from "./Components/fibonacci/Fibonacci"
+import Fibonacci from "./Components/fibonacci/Fibonacci";
+import RomanNumbers from "./Components/romanNumbers/RomanNumbers";
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
             <Route path="/armstrong" exact element = {<Armstrong/>}/>
 
             <Route path="/fibonacci" exact element = {<Fibonacci/>}/>
+
+            <Route path="/roman" exact element = {<RomanNumbers/>}/>
              
           </Routes>
       </Router>
