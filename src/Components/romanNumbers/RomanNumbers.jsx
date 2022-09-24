@@ -89,7 +89,7 @@ function RomanNumbers() {
 
         <a
           className=" text-blue-400 flex"
-          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/armstrong/Armstrong.jsx"
+          href="https://github.com/fedeferrelli/jsexercises/blob/main/src/Components/romanNumbers/RomanNumbers.jsx"
           target="_blank"
         >
           <BsGithub className="m-auto text-4xl" />
