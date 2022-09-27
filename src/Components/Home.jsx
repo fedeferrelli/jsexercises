@@ -11,7 +11,8 @@ function Home() {
         {name: 'Mayúsculas, Minúsculas, etc', link:"/mayusculas"},
         {name: 'Número de Armstrong', link:"/armstrong"},
         {name: 'Sucesión de Fibonacci', link:"/fibonacci"},
-        {name: 'Números Romanos', link:"/roman"} 
+        {name: 'Números Romanos', link:"/roman"},
+        {name: 'Piedra, Papel o Tijera', link:"/piedra_papel_tijera"}  
 
                         ]
 
