@@ -8,7 +8,7 @@ import MayusculasEtc from "./Components/mayusculasEtc/MayusculasEtc";
 import Armstrong from "./Components/armstrong/Armstrong";
 import Fibonacci from "./Components/fibonacci/Fibonacci";
 import RomanNumbers from "./Components/romanNumbers/RomanNumbers";
-import Piedra_papel_tijera from "./Components/piedra_papel_tijera/piedra_papel_tijera";
+import Piedra_papel_tijera from "./Components/piedra_papel_tijera/Piedra_papel_tijera";
 
 
 function App() {
