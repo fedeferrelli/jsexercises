@@ -183,11 +183,11 @@ function Piedra_papel_tijera() {
 
               <div className="text-gray-800 text-xl p-3 flex flex-row gap-2 justify-evenly">
              
-              <div className={machineScore<humanScore ? "w-1/3 rounded-lg p-2 border-green-600 bg-green-500" : machineScore==humanScore ? "rounded-lg p-2 border-gray-800 w-1/3 " :"p-2 rounded-lg w-1/3  bg-red-500 border-red-600"}>
+              <div className={machineScore<humanScore ? "w-1/3 rounded-lg p-2 border border-green-600 bg-green-500" : machineScore==humanScore ? "rounded-lg p-2 border border-gray-800 w-1/3 " :"p-2 rounded-lg w-1/3  bg-red-500 border border-red-600"}>
                 Tú: <span className="block">{humanScore}</span>
               </div> 
              
-           <div className={machineScore>humanScore ? "w-1/3  rounded-lg p-2 border-green-600 bg-green-500" : machineScore==humanScore ? "rounded-lg p-2 border-gray-800 w-1/3 " :"w-1/3  p-2 rounded-lg bg-red-500 border-red-600"}>
+           <div className={machineScore>humanScore ? "w-1/3  rounded-lg p-2 border-green-600 border bg-green-500" : machineScore==humanScore ? "rounded-lg p-2 border border-gray-800 w-1/3 " :"w-1/3  p-2 rounded-lg bg-red-500 border border-red-600"}>
              Machine: <span className="block">{machineScore}</span>
               </div>
               
