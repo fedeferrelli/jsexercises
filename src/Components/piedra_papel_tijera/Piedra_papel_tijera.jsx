@@ -22,7 +22,7 @@ function Piedra_papel_tijera() {
 
   
   const calcular = (choice) =>{
-
+    
     let weapons = ['piedra', 'papel', 'tijera']
     let random = Math.random()
     
@@ -159,20 +159,20 @@ function Piedra_papel_tijera() {
         </Fade>
       )}
 
-      <section className="mt-4 flex flex-col gap-2 w-11/12 m-auto  rounded-lg overflow-hidden shadow-md mb-12">
+      <section className="mt-4 flex flex-col gap-0 w-11/12 m-auto  rounded-lg overflow-hidden shadow-md mb-12">
         {showResults && (
           <Fade duration="500">
             <div className="h-full w-full text-center">
               <div className="bg-gray-400 text-gray-600 text-xl p-3 flex flex-wrap gap-2 justify-center">
-                Mi elección: {myChoice}
+                Mi elección: <span className="uppercase font-semibold">{myChoice}</span>
               </div>
               <div className="bg-gray-400 text-gray-600 text-xl p-3 flex flex-wrap gap-2 justify-center">
-                Machine Choice: {machineWeapon}
+                Machine Choice: <span className="uppercase font-semibold">{machineWeapon}</span>
               </div>
             </div>
             
             <div className="h-full w-full text-center">
-              <div className="text-gray-600 text-xl p-3 flex flex-wrap gap-2 justify-center uppercase">
+              <div className="bg-gray-600 text-gray-400 text-xl p-3 flex flex-wrap gap-2 justify-center uppercase">
                 {result}
               </div>
             </div>
