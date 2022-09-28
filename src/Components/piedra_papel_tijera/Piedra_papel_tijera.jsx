@@ -10,7 +10,7 @@ function Piedra_papel_tijera() {
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false);
- // const [showResults, setShowResults] = useState(false);
+  const [countGames, setCountGames] = useState(0);
 
   const [myChoice, setMyChoice] = useState('Aún nada');
   
@@ -38,9 +38,9 @@ function Piedra_papel_tijera() {
 
     let result = 'lets see';
 
-    if(resultNumber==-1 || resultNumber==2){result= 'ganó la máquina'; setMachineScore(machineScore+1)}
-    else if(resultNumber==1 || resultNumber==-2){result='ganó el humano'; setHumanScore(humanScore+1)}
-    else result= 'empate'
+    if(resultNumber==-1 || resultNumber==2){result= 'ganó la máquina'; setMachineScore(machineScore+1); setCountGames(countGames+1)}
+    else if(resultNumber==1 || resultNumber==-2){result='ganó el humano'; setHumanScore(humanScore+1); setCountGames(countGames+1)}
+    else {result= 'empate'; setCountGames(countGames+1)}
 
     setResult(result)
     setShowResults(true)
@@ -112,30 +112,30 @@ function Piedra_papel_tijera() {
         </select> */}
 
     <section className="flex flex-col gap-4 tracking-wider">
-          <div
+          <button
           className="w-full text-center m-auto p-4 bg-blue-400 rounded-md uppercase text-white"
           onClick={() => {
             calcular(0);
           }}
         >
           Piedra
-        </div>
-        <div
+        </button>
+        <button
           className="w-full text-center m-auto p-4 bg-blue-400 rounded-md uppercase text-white"
           onClick={() => {
             calcular(1);
           }}
         >
           Papel
-        </div>
-        <div
+        </button>
+        <button
           className="w-full text-center m-auto p-4 bg-blue-400 rounded-md uppercase text-white"
           onClick={() => {
             calcular(2);
           }}
         >
           Tijera
-        </div>
+        </button>
       </section>
 
 
@@ -179,21 +179,23 @@ function Piedra_papel_tijera() {
 
             <div className="h-full w-full text-center pt-2 text-xl text-gray-800 bg-gray-400">
 
-            <div>Who's Keeping Score?</div>
+            <div className="text-gray-600">Who's Keeping Score?</div>
 
-              <div className="text-gray-800 text-xl p-3 flex flex-row gap-2 justify-evenly">
+              <div className="text-gray-700 text-xl p-3 flex flex-row gap-2 justify-evenly">
              
-              <div className={machineScore<humanScore ? "w-1/3 rounded-lg p-2 border border-green-600 bg-green-500" : machineScore==humanScore ? "rounded-lg p-2 border border-gray-800 w-1/3 " :"p-2 rounded-lg w-1/3  bg-red-500 border border-red-600"}>
+              <div className={machineScore<humanScore ? "w-1/3 rounded-lg p-2 border border-green-600 bg-green-500" : machineScore==humanScore ? "rounded-lg p-2 border border-gray-800 w-1/3 " :"p-2 rounded-lg w-1/3  bg-red-400 border border-red-600"}>
                 Tú: <span className="block">{humanScore}</span>
               </div> 
              
-           <div className={machineScore>humanScore ? "w-1/3  rounded-lg p-2 border-green-600 border bg-green-500" : machineScore==humanScore ? "rounded-lg p-2 border border-gray-800 w-1/3 " :"w-1/3  p-2 rounded-lg bg-red-500 border border-red-600"}>
+           <div className={machineScore>humanScore ? "w-1/3  rounded-lg p-2 border-green-600 border bg-green-500" : machineScore==humanScore ? "rounded-lg p-2 border border-gray-800 w-1/3 " :"w-1/3  p-2 rounded-lg bg-red-400 border border-red-600"}>
              Machine: <span className="block">{machineScore}</span>
               </div>
               
               
-              
               </div>
+
+              <div className="text-md text-gray-600 py-2 font-thin ">{countGames} {countGames===1 ? 'juego' : 'juegos'} </div>
+              
             </div>
 
 
